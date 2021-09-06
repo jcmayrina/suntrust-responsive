@@ -1596,7 +1596,7 @@ footer .lnk2 input {
 footer .lnk2 input::placeholder {
   color: #243a6f;
 }
-footer .lnk2 a {
+footer .lnk2 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1607,8 +1607,9 @@ footer .lnk2 a {
   border-radius: 5px;
   padding: 1rem;
   transition: 0.3s ease;
+  border: none;
 }
-footer .lnk2 a:hover {
+footer .lnk2 .btn:hover {
   background: #fff;
   color: #1c3334;
 }
@@ -1647,7 +1648,7 @@ footer .footsoc ul a:hover {
   footer .lnk2 input {
     font-size: 1.3rem;
   }
-  footer .lnk2 a {
+  footer .lnk2 .btn {
     margin-left: 4px;
   }
   footer .lnk2 #email {

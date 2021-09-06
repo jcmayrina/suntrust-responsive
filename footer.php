@@ -10,8 +10,8 @@
         <div class="lnk2">
           <p>Subscribe to Newsletter</p>
           <form action="" class="subs">
-          <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address">
-          <a href="#submit">Go</a></form>
+          <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address" required>
+          <input type="submit" class="btn" value="Go" /></form>
         </div>
         
         <div class="soclink">

@@ -6,35 +6,35 @@
   
         <div class="row">
   
-          <form action="">
+          <form action="" class="inquire">
             <div class="inputBox">
               <h4>Full Name</h4>
               <h4>Email</h4>
             </div>
             <div class="inputBox">
-              <input type="text" placeholder="Last Name, First Name" required/>
-              <input type="email" placeholder="your@email.com" required/>
+              <input type="text" name="fullname" placeholder="Last Name, First Name" required/>
+              <input type="email" name="email" placeholder="your@email.com" required/>
             </div>
             <div class="inputBox">
               <h4>Number</h4>
               <h4>Property</h4>
             </div>
             <div class="inputBox">
-              <input type="number" placeholder="999-9999 / 9999-999-9999" required/>
-              <input type="text" placeholder="Amadea/Shanata/Verona/Capitol Plaza/Sentosa/Kirana/Asmara/San Francisco/Gran Avila" required/>
+              <input type="number" name="number" placeholder="999-9999 / 9999-999-9999" required/>
+              <input type="text" name="property" placeholder="Amadea/Shanata/Verona/Capitol Plaza/Sentosa/Kirana/Asmara/San Francisco/Gran Avila" required/>
             </div>
             <div class="inputBox">
             <h4>Message</h4>
             </div>
             <textarea
               placeholder="Message"
-              name=""
+              name="message"
               id=""
               cols="30"
               rows="10"
               required
             ></textarea>
-            <input type="submit" class="btn" value="SEND MESSAGE" />
+            <input type="submit" name="submit" class="btn" value="SEND MESSAGE">
           </form></div></center>
           <div class="soclink">
             <center>

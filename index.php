@@ -138,7 +138,7 @@
       <center>
       <div class="swiper-container review-slider">
         <div class="swiper-wrapper">
-          <a href="suntrust-condo_name.php" class="swiper-slide">
+          <a href="property.php" class="swiper-slide">
             <div class="box">
               <img src="images/amadea.jpg" alt="" />
               <h3>Suntrust Amadea</h3>

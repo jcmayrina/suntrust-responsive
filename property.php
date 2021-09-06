@@ -49,7 +49,7 @@
            Unit Models
          </div>
          <div class="container">
-           <div class="box" onclick="location.href='condo_name-unit.php'">
+           <div class="box" onclick="location.href='unit.php'">
              <div class="unitpic">
                <img src="./images/amadea.jpg" alt="">
                <div class="overlay"><div class="content">
@@ -64,7 +64,7 @@
                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga impedit nemo ipsam sequi accusantium.</span>
              </div>
            </div>
-           <div class="box" onclick="location.href='condo_name-unit.php'">
+           <div class="box" onclick="location.href='unit.php'">
              <div class="unitpic">
                <img src="./images/amadea.jpg" alt="">
                <div class="overlay"><div class="content">
@@ -79,7 +79,7 @@
                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga impedit nemo ipsam sequi accusantium.</span>
              </div>
            </div>
-           <div class="box" onclick="location.href='condo_name-unit.php'">
+           <div class="box" onclick="location.href='unit.php'">
              <div class="unitpic">
                <img src="./images/amadea.jpg" alt="">
                <div class="overlay"><div class="content">

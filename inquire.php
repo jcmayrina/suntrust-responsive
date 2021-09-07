@@ -18,9 +18,9 @@
   ?>
     <main>
      <!-- Contact Form -->
-     
+
      <?php
-      include('Includes/_contact.php');
+      include('./Includes/_contact.php');
       ?>
    
     <!-- Footer -->

@@ -1996,3 +1996,36 @@ footer .footsoc ul a:hover {
     height: 100%;
   }
 }
+
+.all-listing {
+  display: block;
+}
+
+.all-listing .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.all-listing .top select {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.all-listing .top .header {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 450px) {
+  .all-listing .top select {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .all-listing .top .header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}

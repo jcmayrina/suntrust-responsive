@@ -36,6 +36,6 @@
     />
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./css/style.css" />
-    <?php
-  include('functions.php');
-  ?>
+    <?php 
+    include('./Database/db.php');
+    ?>

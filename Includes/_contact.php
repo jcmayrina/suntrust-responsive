@@ -5,8 +5,7 @@
         </h1>
   
         <div class="row">
-  
-          <form action="" class="inquire">
+          <form action="" class="inquire" method="POST">
             <div class="inputBox">
               <h4>Full Name</h4>
               <h4>Email</h4>
@@ -20,8 +19,8 @@
               <h4>Property</h4>
             </div>
             <div class="inputBox">
-              <input type="number" name="number" placeholder="999-9999 / 9999-999-9999" required/>
-              <input type="text" name="property" placeholder="Amadea/Shanata/Verona/Capitol Plaza/Sentosa/Kirana/Asmara/San Francisco/Gran Avila" required/>
+              <input type="number" min="10" name="number" placeholder="999-9999 / 9999-999-9999" required/>
+              <input type="text" minlength="5" name="property" placeholder="Amadea/Shanata/Verona/Capitol Plaza/Sentosa/Kirana/Asmara/San Francisco/Gran Avila" required/>
             </div>
             <div class="inputBox">
             <h4>Message</h4>
@@ -29,6 +28,7 @@
             <textarea
               placeholder="Message"
               name="message"
+              minlength="10"
               id=""
               cols="30"
               rows="10"
@@ -36,6 +36,20 @@
             ></textarea>
             <input type="submit" name="submit" class="btn" value="SEND MESSAGE">
           </form></div></center>
+          <?php
+            include('./Database/db.php');
+            if(isset($_POST['fullname'])||isset($_POST['email'])||isset($_POST['number'])||isset($_POST['property'])||isset($_POST['message'])){
+              $fullname = mysqli_real_escape_string($conn,$_POST['fullname']);
+              $email = mysqli_real_escape_string($conn,$_POST['email']);
+              $number = mysqli_real_escape_string($conn,$_POST['number']);
+              $property = mysqli_real_escape_string($conn,$_POST['property']);
+              $message = mysqli_real_escape_string($conn,$_POST['message']);
+
+              $sql = "INSERT INTO contact (fullname,email,number,property,message)
+              VALUES ('$fullname','$email','$number','$property','$message');";
+              mysqli_query($conn,$sql);
+            }
+          ?>
           <div class="soclink">
             <center>
             <div class="social-menu">

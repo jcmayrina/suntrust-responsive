@@ -25,8 +25,7 @@
       <?php
       include('Includes/_promos.php');
       ?>
-
-
+      
       <!-- House & Lot -->
     
      <section class="review hl" id="review">

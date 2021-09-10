@@ -21,6 +21,7 @@
      <section class="galleryunit">
      <div class="header">
         <h1>Studio</h1>
+       <h3>Scout Reyes St. cor. Quezon Ave,<br> Paligsahan, Quezon City</h3>
      </div>
      <div class="specs">
          <p class="property">Suntrust Amadea</p>

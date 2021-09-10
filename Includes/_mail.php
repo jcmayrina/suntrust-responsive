@@ -10,11 +10,26 @@ if(mysqli_num_rows($query)>0){
     header("Location: ../index.php?failed-to-insert");
 }
 else{
-    $sql = "INSERT INTO email (email_add) VALUES ('$email');";
-    if(mysqli_query($conn,$sql)){
-    header("Location: ../index.php?successfully-registered");
+    $chk = mysqli_stmt_init($conn);
+    $chk1 = "INSERT INTO email (email_add)
+    VALUES (?);";
+    
+    $stmt = $conn->prepare("INSERT INTO email (email_add)
+    VALUES (?)");
+
+    if(!mysqli_stmt_prepare($chk,$chk1)){
+        header("Location: ../index.php?failed-to-insert");
     }
-    else
-    header("Location: ../index.php?failed-to-insert");
+    else{
+        
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            echo "Enter a valid email!";
+          }
+          else{
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            header("Location: ../index.php?successfully-registered");
+          }
+    }
 }
 ?>

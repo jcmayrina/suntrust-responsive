@@ -565,6 +565,24 @@ a.nav-link:hover {
   }
 }
 
+.login h2 {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-form {
+  display: block;
+  text-align: center;
+}
+
 /* Hero Area */
 .hero,
 .glide__hero,

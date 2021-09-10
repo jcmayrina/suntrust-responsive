@@ -452,6 +452,16 @@ a.nav-link:hover {
     border-radius: 5px;
   }
 }
+.login h2{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form{
+  display: block;
+  text-align: center;
+}
 /* Hero Area */
 .hero,
 .glide__hero,

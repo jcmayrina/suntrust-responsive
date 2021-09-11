@@ -9,7 +9,7 @@
         </div>
         <div class="lnk2">
           <p>Subscribe to Newsletter</p>
-          <form action="./Includes/_mail.php" class="subs" method="POST">
+          <form action="" class="subs" method="POST">
           <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address" required>
           <input type="submit" class="btn" value="Go" /></form>
         </div>

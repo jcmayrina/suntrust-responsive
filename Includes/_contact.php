@@ -36,36 +36,6 @@
             ></textarea>
             <input type="submit" name="submit" class="btn" value="SEND MESSAGE">
           </form></div></center>
-          <?php
-            include('./Database/db.php');
-            if(isset($_POST['submit'])){
-              $fullname = mysqli_real_escape_string($conn,$_POST['fullname']);
-              $email = mysqli_real_escape_string($conn,$_POST['email']);
-              $number = mysqli_real_escape_string($conn,$_POST['number']);
-              $property = mysqli_real_escape_string($conn,$_POST['property']);
-              $message = mysqli_real_escape_string($conn,$_POST['message']);
-
-              $stmt = $conn->prepare("INSERT INTO contact (fullname,email,number,property,message)
-              VALUES (?,?,?,?,?)");
-
-              $chk = mysqli_stmt_init($conn);
-              $chk1 = "INSERT INTO contact (fullname,email,number,property,message)
-              VALUES (?,?,?,?,?);";
-
-              if(!mysqli_stmt_prepare($chk,$chk1)){
-                echo "SQL Error";
-              }
-              else{
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                  echo "Enter a valid email!";
-                }
-                else{
-                  $stmt->bind_param("ssiss", $fullname, $email, $number, $property, $message);
-                  $stmt->execute();
-                }
-              }
-            }
-          ?>
           <div class="soclink">
             <center>
             <div class="social-menu">

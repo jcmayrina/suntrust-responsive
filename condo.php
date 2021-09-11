@@ -39,6 +39,7 @@
       </div>
 
         <div class="grid">
+          
           <div class="grid-item Quezon-City">
             <div class="card" onclick="location.href='unit.php'">
               <img class="card-img" src="./images/amadea.jpg" alt="Amadea" />

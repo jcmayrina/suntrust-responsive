@@ -55,7 +55,8 @@ $(document).ready(function () {
     if (propertyname == "SortPrice") $(".grid-item").show();
   });
 });
-gsap.from(".cont-link", { opacity: 0, duration: 1, delay: 1, x: -45 });
+gsap.from(".first", { opacity: 0, duration: 1, delay: 1, x: -500 });
+gsap.from(".cont-link", { opacity: 0, duration: 1, delay: 1, y: -45 });
 gsap.from(".logo1", { opacity: 0, duration: 1, delay: 1, y: -10 });
 gsap.from(".scroll-link", { opacity: 0, duration: 1, delay: 1, y: -10 });
 gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 1.2, x: 20 });

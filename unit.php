@@ -18,30 +18,43 @@
   include('nav.php');
   ?>
     <main>
+      <?php 
+      $product_shuffle = $unit->getData();
+      $item_id = $_GET['unit_id']??1;
+      foreach($product_shuffle as $item):
+        if($item['unit_id']==$item_id):
+          $gallery = $item['unit_gallery'];
+          $comma_separated = (explode(',',$gallery));
+          $details = $item['unit_details'];
+          $question_separated = (explode('?',$details));
+      ?>
      <section class="galleryunit">
      <div class="header">
-        <h1>Studio</h1>
-       <h3>Scout Reyes St. cor. Quezon Ave,<br> Paligsahan, Quezon City</h3>
+        <h1><?php echo $item['unit_name']??"Studio";?></h1>
+       <h3><?php echo $item['unit_address']??"Unknown";?></h3>
      </div>
      <div class="specs">
-         <p class="property">Suntrust Amadea</p>
-         <p class="floor">Typical Floor Area: 24sqm</p>
-         <p class="price">Starts at ₱ 2,800,000</p>
+         <p class="property"><?php echo $item['unit_property']??"Unknown";?></p>
+         <p class="floor">Typical Floor Area: <?php echo $item['unit_floor_area']??"Unknown";?></p>
+         <p class="price">Starts at ₱ <?php echo $item['unit_price']??"Unknown";?></p>
      </div>
      
     <div class="slider">
-      <img class="mySlides" src="./images/amadea/UNIT PERSPECTIVE/STUDIO/STUDIO sleeping area _ living.jpg"alt="">
-      <img class="mySlides" src="./images/amadea/UNIT PERSPECTIVE/STUDIO/STUDIO sleeping area _ living 1.jpg"alt="">
-      <img class="mySlides" src="./images/amadea/UNIT PERSPECTIVE/STUDIO/STUDIO kitchen.jpg" alt="">
-
+      <?php 
+      foreach($comma_separated as $gall){
+        echo "<img class='mySlides' src='".$gall."' alt=''>";
+      }
+      ?>
         <button class="butimg leftbutt" onclick="plusDivs(-1)"><i class='bx bx-chevron-left'></i></button>
         <button class="butimg rightbutt" onclick="plusDivs(1)"><i class='bx bx-chevron-right'></i></button>
     <div class="details">
         <h3>Details</h3>
         <ul>
-            <li>Floor Finishes: Ceramic tiles</li>
-            <li>Kitchen: Custom built under counter kitchen cabinets (overhead cabinets not included), with Provision for Rangehood</li>
-            <li>Toilet & Bath: Unglazed Ceramic Tiles</li>
+        <?php 
+      foreach($question_separated as $deet){
+        echo "<li>".$deet."</li>";
+      }
+      ?>
         </ul>
     </div>
     </div>
@@ -51,9 +64,13 @@
             Virtual Tour
         </h1>
         <div class="iframe-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/OLeetf3A35k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <?php echo $item['unit_yt_link']??"Unknown";?>
     </div>
     </section>
+    <?php 
+    endif;
+    endforeach;
+    ?>
     <?php
   include('Includes/_other_models.php');
   ?> 

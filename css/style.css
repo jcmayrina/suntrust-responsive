@@ -1445,6 +1445,12 @@ form span {
   height: min-content;
 }
 
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #0d0d0d;
+}
+
 .card-header {
   font-size: 3rem;
   font-weight: 500;

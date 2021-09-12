@@ -19,7 +19,8 @@
                 <span><h1>2 BR</h1></span>
                 <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga impedit nemo ipsam sequi accusantium.</span>
               </div>
-            </div><div class="box">
+            </div>
+            <div class="box">
               <div class="unitpic">
                 <img src="./images/amadea.jpg" alt="">
                 <div class="overlay"><div class="content">

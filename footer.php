@@ -13,7 +13,6 @@
           <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address" required>
           <input type="submit" class="btn" value="Go" /></form>
         </div>
-        
         <div class="soclink">
           <center>
           <div class="footsoc">

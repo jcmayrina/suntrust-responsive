@@ -39,5 +39,6 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="./css/style.css" />
     <?php 
-    include('./Database/db.php');
+    include('./Includes/_autoload.php');
+    include('functions.php');
     ?>

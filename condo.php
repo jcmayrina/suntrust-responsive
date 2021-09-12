@@ -30,104 +30,44 @@
                   <option value="Manila">&emsp;Manila</option>
                   <option value="Quezon-City">&emsp;Quezon City</option>
                   <option value="Pasig">&emsp;Pasig</option>
-                  <option value="Mandaluyong">&emsp;Mandaluyong</option>
-                  <option value="Baguio">&emsp;Baguio</option>
-                  <option value="Davao">&emsp;Davao</option>
               </select>
               <span><i class='bx bx-chevron-down'></i></span>
           </form>
       </div>
-
+      <?php 
+      $product_shuffle = $condo->getData();
+      shuffle($product_shuffle);
+      ?>
         <div class="grid">
-          
-          <div class="grid-item Quezon-City">
-            <div class="card" onclick="location.href='unit.php'">
-              <img class="card-img" src="./images/amadea.jpg" alt="Amadea" />
+          <?php 
+          foreach($product_shuffle as $item){
+          $picture = $item['unit_gallery'];
+          $comma_separated = (explode(',',$picture));
+          ?>
+          <div class="grid-item <?php echo $item['unit_city']??"Quezon-City";?>">
+            <div class="card" onclick="location.href='<?php printf('%s?unit_id=%s','unit.php',$item['unit_id']);?>'">
+              <img class="card-img" src="<?php echo $comma_separated[0];?>"
+                alt="<?php 
+                echo $item['unit_property']??'Unknown';
+                ?>" />
               <div class="card-content">
-                <h1 class="card-header">Amadea</h1>
-                <p class="card-text">
-                  	Scout Reyes St. cor. Quezon Ave, Paligsahan, Quezon City
+                <h5 class="card-title"><?php 
+                echo $item['unit_property']??'Unknown';
+                ?></h5>
+                <h1 class="card-header"><?php 
+                echo $item['unit_name']??'Unknown';
+                ?></h1>
+                <p class="card-text"><?php 
+                echo $item['unit_address']??'Unknown';
+                ?>
                 </p>
                 <button class="card-btn">Visit <span>&rarr;</span></button>
               </div>
             </div>
           </div>
-          
-          <div class="grid-item Quezon-City">
-            <div class="card" onclick="location.href='#amadea'">
-              <img class="card-img" src="./images/asmara.jpg" alt="Asmara" />
-              <div class="card-content">
-                <h1 class="card-header">Asmara</h1>
-                <p class="card-text">
-                  E. Rodriguez Ave., Quezon City
-                </p>
-                <button class="card-btn">Visit <span>&rarr;</span></button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="grid-item Manila">
-            <div class="card" onclick="location.href='#amadea'">
-              <img class="card-img" src="./images/solana.jpg" alt="Solana" />
-              <div class="card-content">
-                <h1 class="card-header">Solana</h1>
-                <p class="card-text">	
-                  Natividad Almeda-lopez, Ermita, Manila
-                </p>
-                <button class="card-btn">Visit <span>&rarr;</span></button>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item Quezon-City">
-            <div class="card" onclick="location.href='#amadea'">
-              <img class="card-img" src="./images/capitol.jpg" alt="Capitol Plaza" />
-              <div class="card-content">
-                <h1 class="card-header">Capitol Plaza</h1>
-                <p class="card-text">	
-                  Matalino St., Diliman, Quezon City
-                </p>
-                <button class="card-btn">Visit <span>&rarr;</span></button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="grid-item Quezon-City">
-            <div class="card" onclick="location.href='#amadea'">
-              <img class="card-img" src="./images/shanata.jpg" alt="Shanata" />
-              <div class="card-content">
-                <h1 class="card-header">Shanata</h1>
-                <p class="card-text">
-                  Quirino Highway, Novaliches, Quezon City
-                </p>
-                <button class="card-btn">Visit <span>&rarr;</span></button>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item Pasig">
-            <div class="card" onclick="location.href='#amadea'">
-              <img class="card-img" src="./images/kirana.jpg" alt="Kirana" />
-              <div class="card-content">
-                <h1 class="card-header">Kirana</h1>
-                <p class="card-text">
-                  Urbano Velasco Ave., Pasig City
-                </p>
-                <button class="card-btn">Visit <span>&rarr;</span></button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="grid-item Manila">
-            <div class="card" onclick="location.href='#amadea'">
-              <img class="card-img" src="./images/ascentia.png" alt="Ascentia" />
-              <div class="card-content">
-                <h1 class="card-header">Ascentia</h1>
-                <p class="card-text">
-                  New Panaderos St., Sta. Ana, Manila
-                </p>
-                <button class="card-btn">Visit <span>&rarr;</span></button>
-              </div>
-            </div>
-          </div>
+          <?php 
+          }
+          ?>
         </div>
   </section>
   <?php

@@ -4,7 +4,7 @@
   <?php
   include('header.php');
   ?>
-    <title>Condominium | Affordable Homes PH</title>
+    <title>House & Lot | Affordable Homes PH</title>
   </head>
   <body>
     <!-- Messenger Chat Plugin Code -->

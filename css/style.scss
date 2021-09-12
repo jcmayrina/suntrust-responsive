@@ -1670,6 +1670,9 @@ footer .footsoc ul a:hover {
     margin-left: 4px;
   }
 }
+.galleryunit .slider .details li {
+  min-width: 400px;
+}
 @media only screen and (orientation: landscape) and (max-width: 750px) {
   footer .lnk1 {
     font-size: 1.5rem;

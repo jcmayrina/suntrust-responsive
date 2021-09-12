@@ -5,12 +5,12 @@
   include('header.php');
   ?>
   <?php 
-   $product_shuffle = $condo->getData();
-   $item_id = $_GET['unit_id']??1;
-   foreach($product_shuffle as $item):
-    if($item['unit_id']==$item_id):
+  $product_shuffle = $house->getData();
+  $item_id = $_GET['house_id']??1;
+  foreach($product_shuffle as $item):
+    if($item['house_id']==$item_id):
   ?>
-    <title><?php echo $item['unit_name']." - ".$item['unit_property'];?> | Affordable Homes PH</title>
+    <title><?php echo $item['house_name']." - ".$item['house_property'];?> | Affordable Homes PH</title>
   </head>
   <body>
     <!-- Messenger Chat Plugin Code -->
@@ -24,21 +24,21 @@
   include('nav.php');
   ?>
     <main>
-      <?php
-          $gallery = $item['unit_gallery'];
+      <?php 
+          $gallery = $item['house_gallery'];
           $comma_separated = (explode(',',$gallery));
-          $details = $item['unit_details'];
+          $details = $item['house_details'];
           $question_separated = (explode('?',$details));
       ?>
      <section class="galleryunit">
      <div class="header">
-        <h1><?php echo $item['unit_name']??"Studio";?></h1>
-       <h3><?php echo $item['unit_address']??"Unknown";?></h3>
+        <h1><?php echo $item['house_name']??"Studio";?></h1>
+       <h3><?php echo $item['house_address']??"Unknown";?></h3>
      </div>
      <div class="specs">
-         <p class="property"><?php echo $item['unit_property']??"Unknown";?></p>
-         <p class="floor">Typical Floor Area: <?php echo $item['unit_floor_area']??"Unknown";?></p>
-         <p class="price">Starts at ₱ <?php echo $item['unit_price']??"Unknown";?></p>
+         <p class="property"><?php echo $item['house_property']??"Unknown";?></p>
+         <p class="floor">Typical Floor Area: <?php echo $item['house_floor_area']??"Unknown";?></p>
+         <p class="price">Starts at ₱ <?php echo $item['house_price']??"Unknown";?></p>
      </div>
      
     <div class="slider">
@@ -66,7 +66,7 @@
             Virtual Tour
         </h1>
         <div class="iframe-container">
-        <?php echo $item['unit_yt_link']??"Unknown";?>
+        <?php echo $item['house_yt_link']??"Unknown";?>
     </div>
     </section>
     <?php 

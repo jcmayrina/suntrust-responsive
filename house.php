@@ -5,7 +5,8 @@
   include('header.php');
   ?>
   <?php 
-  $product_shuffle = $house->getData();
+  $house = new Userview();
+  $product_shuffle = $house->getHouse();
   $item_id = $_GET['house_id']??1;
   foreach($product_shuffle as $item):
     if($item['house_id']==$item_id):
@@ -37,7 +38,7 @@
      </div>
      <div class="specs">
          <p class="property"><?php echo $item['house_property']??"Unknown";?></p>
-         <p class="floor">Typical Floor Area: <?php echo $item['house_floor_area']??"Unknown";?></p>
+         <p class="floor"><?php echo $item['house_floor_area']??"Unknown";?></p>
          <p class="price">Starts at ₱ <?php echo $item['house_price']??"Unknown";?></p>
      </div>
      
@@ -74,7 +75,7 @@
     endforeach;
     ?>
     <?php
-  include('Includes/_other_models.php');
+  include('Includes/_house_models.php');
   ?> 
     
   <?php

@@ -17,7 +17,10 @@
   ?>
     <!-- Main -->
     <main>
-
+    <div class="achieve">
+    <h1 class="header">Achievements</h1>
+    <h2 class="sales">Closed Sales</h2>
+    </div>
     <!-- Interested -->
     <?php
     include('Includes/_interested.php');

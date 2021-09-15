@@ -5,7 +5,8 @@
   include('header.php');
   ?>
   <?php 
-   $product_shuffle = $condo->getData();
+   $condo = new Userview();
+   $product_shuffle = $condo->getCondo();
    $item_id = $_GET['unit_id']??1;
    foreach($product_shuffle as $item):
     if($item['unit_id']==$item_id):
@@ -74,7 +75,7 @@
     endforeach;
     ?>
     <?php
-  include('Includes/_other_models.php');
+  include('Includes/_condo_models.php');
   ?> 
     
   <?php

@@ -992,9 +992,11 @@ a.nav-link:hover {
 }
 .condo {
   background-image: url(../images/condcover.png);
+  background-size: cover;
 }
 .hl {
   background-image: url(../images/hlcover.png);
+  background-size: cover;
 }
 .social-menu ul {
   display: flex;
@@ -1084,6 +1086,7 @@ a.nav-link:hover {
   padding-top: 1rem;
   background-image: url(../images/yellowbanner.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 @media only screen and (max-width: 550px) {
   .social-menu ul {
@@ -1671,7 +1674,7 @@ footer .footsoc ul a:hover {
   }
 }
 .galleryunit .slider .details li {
-  min-width: 400px;
+  min-width: 30vw;
 }
 @media only screen and (orientation: landscape) and (max-width: 750px) {
   footer .lnk1 {
@@ -2048,4 +2051,14 @@ footer .footsoc ul a:hover {
     font-size: 2rem;
     font-weight: 500;
   }
+}
+.achieve .header {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 400;
+}
+.achieve .sales {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
 }

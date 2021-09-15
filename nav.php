@@ -75,7 +75,7 @@
                 <a href="house&lot.php" class="nav-link scroll-link">HOUSE & LOT</a>
                 <a href="condo.php" class="nav-link scroll-link">CONDOMINIUM</a>
                 <a href="achievements.php" class="nav-link scroll-link">ACHIEVEMENTS</a>
-                <a href="aboutus.php" class="nav-link scroll-link">ABOUT US</a>
+                <!-- <a href="aboutus.php" class="nav-link scroll-link">ABOUT US</a> -->
                 <a href="inquire.php" class="nav-link inq scroll-link">INQUIRE NOW</a>
               </li>
             </ul>

@@ -2,14 +2,14 @@
         <div class="lnk1">
           &emsp;<a href="house&lot.php">House & Lot</a>
           &emsp;<a href="condo.php">Condominium</a>
-          &emsp;<a href="#">Achievements</a>
-          &emsp;<a href="#">About Us</a>
+          &emsp;<a href="achievements.php">Achievements</a>
+          <!-- &emsp;<a href="#">About Us</a> -->
           &emsp;<a href="tel:+639209815837">+639209815837</a>
           &emsp;<a href="tel:+639359853093">+639359853093</a>
         </div>
         <div class="lnk2">
           <p>Subscribe to Newsletter</p>
-          <form action="" class="subs" method="POST">
+          <form class="subs" method="POST">
           <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address" required>
           <input type="submit" class="btn" value="Go" /></form>
         </div>

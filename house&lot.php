@@ -25,7 +25,7 @@
           <form>
               <select id="property-select">
                   <option value="All">Show All</option>
-                  <option value="SortPrice">Sort by Price</option>
+                  <!-- <option value="SortPrice">Sort by Price</option> -->
                   <option value="3" disabled>*Sort by Location</option>
                   <option value="Cavite">&emsp;Cavite</option>
                   <option value="Laguna">&emsp;Laguna</option>
@@ -37,8 +37,9 @@
               <span><i class='bx bx-chevron-down'></i></span>
           </form>
       </div>
-      <?php 
-      $product_shuffle = $house->getData();
+      <?php
+      $house = new Userview();
+      $product_shuffle = $house->getHouse();
       shuffle($product_shuffle);
       ?>
         <div class="grid">

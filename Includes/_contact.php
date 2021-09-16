@@ -35,6 +35,13 @@
               required
             ></textarea>
             <input type="submit" name="submit" class="btn" value="SEND MESSAGE">
+            <?php
+          if(isset($_POST['submit'])){
+              $usercontrlobj = new Usercontrl();
+              $usercontrlobj->setContact();
+              }
+
+          ?>
           </form></div></center>
           <div class="soclink">
             <center>

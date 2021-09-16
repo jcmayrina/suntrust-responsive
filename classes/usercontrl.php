@@ -20,6 +20,20 @@ class Usercontrl extends Dbh{
 
         return $result;
     }
+    
+    public function setContact(){
+        $fname = $_POST['fullname'];
+        $email = $_POST['email'];
+        $number = $_POST['number'];
+        $property = $_POST['property'];
+        $message = $_POST['message'];
+
+        $stmt = $this->connect()->prepare("INSERT INTO `contact` (`fullname`, `email`, `number`, `property`, `message`) VALUES (?,?,?,?,?)");
+        if($stmt->execute([$fname,$email,$number,$property,$message])){
+        }
+        else
+        echo "failure";
+    }
 
 }
 ?>

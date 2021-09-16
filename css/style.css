@@ -2503,12 +2503,14 @@ footer .footsoc ul a:hover {
   text-align: center;
   font-size: 5rem;
   font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .achieve .sales {
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .text-danger {
@@ -2516,5 +2518,63 @@ footer .footsoc ul a:hover {
   font-size: 1.5rem;
   pointer-events: none;
   display: contents;
+}
+
+.acv .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.acv .column {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+
+.acv .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-filter: blur(0.5px) brightness(0.5);
+          filter: blur(0.5px) brightness(0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.acv .column img:hover {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+@media screen and (max-width: 800px) {
+  .acv .column {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .acv .column {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+  }
+  .acv .column img {
+    -webkit-filter: grayscale(0) brightness(1);
+            filter: grayscale(0) brightness(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */

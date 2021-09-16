@@ -2056,15 +2056,59 @@ footer .footsoc ul a:hover {
   text-align: center;
   font-size: 5rem;
   font-weight: 400;
+  margin-bottom: 30px;
 }
 .achieve .sales {
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 .text-danger {
   color: red;
   font-size: 1.5rem;
   pointer-events: none;
   display: contents;
+}
+.acv .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.acv .column {
+  flex: 25%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+
+.acv .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  filter: blur(0.5px) brightness(0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.acv .column img:hover {
+  filter: blur(0px);
+}
+@media screen and (max-width: 800px) {
+  .acv .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .acv .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .acv .column img {
+    filter: grayscale(0) brightness(1);
+  }
 }

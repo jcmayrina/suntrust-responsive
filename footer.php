@@ -11,7 +11,23 @@
           <p>Subscribe to Newsletter</p>
           <form class="subs" method="POST">
           <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address" required>
-          <input type="submit" class="btn" value="Go" /></form>
+          <input type="submit" name="submit" class="btn" value="Go" />
+          <?php
+          if(isset($_POST['submit'])){
+              $inpemail = $_POST['email'];
+              $usercontrlobj = new Usercontrl();
+              
+              $email = $usercontrlobj->getEmail($inpemail);
+
+              if($email>0){
+                echo "<span class='text-danger'>&nbsp;&nbsp;Email already exist!</span>";
+              }
+              else{
+                $usercontrlobj->setEmail();
+              }}
+
+          ?></form>
+         
         </div>
         <div class="soclink">
           <center>

@@ -5,7 +5,7 @@
         </h1>
   
         <div class="row">
-          <form action="" class="inquire" method="POST">
+          <form class="inquire" method="POST">
             <div class="inputBox">
               <h4>Full Name</h4>
               <h4>Email</h4>

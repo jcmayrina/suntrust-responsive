@@ -2510,4 +2510,11 @@ footer .footsoc ul a:hover {
   font-size: 3rem;
   font-weight: 400;
 }
+
+.text-danger {
+  color: red;
+  font-size: 1.5rem;
+  pointer-events: none;
+  display: contents;
+}
 /*# sourceMappingURL=style.css.map */

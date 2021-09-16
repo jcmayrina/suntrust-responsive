@@ -37,7 +37,6 @@
       <?php 
       $condo = new Userview();
       $product_shuffle = $condo->getCondo();
-      shuffle($product_shuffle);
       ?>
         <div class="grid">
           <?php 

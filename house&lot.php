@@ -40,7 +40,6 @@
       <?php
       $house = new Userview();
       $product_shuffle = $house->getHouse();
-      shuffle($product_shuffle);
       ?>
         <div class="grid">
           <?php 

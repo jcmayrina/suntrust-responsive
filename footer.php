@@ -11,9 +11,9 @@
           <p>Subscribe to Newsletter</p>
           <form class="subs" method="POST">
           <input type="email" name="email" id="email" placeholder="&nbsp;Enter your email address" required>
-          <input type="submit" name="submit" class="btn" value="Go" />
+          <input type="submit" name="emailsubmit" class="btn" value="Go" />
           <?php
-          if(isset($_POST['submit'])){
+          if(isset($_POST['emailsubmit'])&&isset($_POST['email'])){
               $inpemail = $_POST['email'];
               $usercontrlobj = new Usercontrl();
               

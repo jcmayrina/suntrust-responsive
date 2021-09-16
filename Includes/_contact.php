@@ -34,9 +34,9 @@
               rows="10"
               required
             ></textarea>
-            <input type="submit" name="submit" class="btn" value="SEND MESSAGE">
+            <input type="submit" name="contsubmit" class="btn" value="SEND MESSAGE">
             <?php
-          if(isset($_POST['submit'])){
+          if(isset($_POST['contsubmit'])&&isset($_POST['fullname'])&&isset($_POST['email'])&&isset($_POST['number'])&&isset($_POST['property'])&&isset($_POST['message'])){
               $usercontrlobj = new Usercontrl();
               $usercontrlobj->setContact();
               }

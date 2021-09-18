@@ -2112,3 +2112,49 @@ footer .footsoc ul a:hover {
     filter: grayscale(0) brightness(1);
   }
 }
+.insertcondo {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+  text-align: center;
+  margin: 0 auto;
+}
+.insertcondo input {
+  margin-bottom: 10px;
+}
+.mails {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.mailtime {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.email {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.contactinfo .header {
+  text-align: center;
+}
+.contactinfo .conts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+.contactinfo .conts td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.email .conts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+.email .conts td {
+  border: 1px solid black;
+  padding: 5px;
+}

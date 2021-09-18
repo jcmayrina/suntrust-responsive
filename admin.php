@@ -34,7 +34,7 @@
         <?php 
         foreach($emails as $item){
             $date = new DateTime($item['date_time']);
-            $result = $date->format('F d, Y | g:i A');
+            $result = $date->format('M d, Y | g:i A');
             echo "<tr>
                     <td>".$item['email_add']."</td>".
                     "<td>".$result."</td>"
@@ -58,13 +58,16 @@
                 </tr>
                 <?php
                 foreach($contacts as $item){
+                    $date = new DateTime($item['date_time']);
+                    $mos = $date->format('M d, Y');
+                    $time = $date->format('g:i A');
                 echo "<tr>
                     <td>".$item['fullname']."</td>".
                     "<td>".$item['email']."</td>".
                     "<td>".$item['number']."</td>".
                     "<td>".$item['property']."</td>".
                     "<td>".$item['message']."</td>".
-                    "<td>".$item['date_time']."</td>"
+                    "<td>".$mos."<br>".$time."</td>"
                     ."</tr>";}?>
             </table>
         </div>

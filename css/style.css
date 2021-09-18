@@ -2631,6 +2631,7 @@ footer .footsoc ul a:hover {
 .contactinfo .conts td {
   border: 1px solid black;
   padding: 5px;
+  max-width: 40vw;
 }
 
 .email .conts {

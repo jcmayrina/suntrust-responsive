@@ -35,5 +35,30 @@ class Usercontrl extends Dbh{
         echo "failure";
     }
 
+    public function login(){
+        $user = $_POST['username'];
+        $pass = sha1($_POST['password']);
+        
+        $sql = $this->connect()->prepare("SELECT * FROM `user` WHERE username =:user AND password =:pass");
+        $sql->execute(array('user'=>$user,'pass'=>$pass));
+
+        if($sql->rowCount()){
+            $data = $sql->fetch();
+            $_SESSION['user_id'] = $data['user_id'];
+            $_SESSION['user_id'] = true;
+            header('location:admin.php');
+        }
+        else{
+            echo "Incorrect username/password!";
+        }
+    }
+
+    public function logout(){
+        if(isset($_POST['logout'])){
+        session_destroy();
+
+        header('location:login.php');}
+
+    }
 }
 ?>

@@ -26,21 +26,27 @@ window.addEventListener("scroll", function () {
 });
 
 var swiper = new Swiper(".review-slider", {
-  spaceBetween: 20,
+  spaceBetween: 10,
   loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
   breakpoints: {
-    512: {
+    360: {
       slidesPerView: 1,
+    },
+    512: {
+      slidesPerView: 2,
     },
     640: {
       slidesPerView: 2,
     },
     896: {
       slidesPerView: 3,
+    },
+    1000: {
+      slidesPerView: 5,
     },
   },
 });

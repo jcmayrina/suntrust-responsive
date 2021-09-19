@@ -70,7 +70,75 @@
                     "<td>".$mos."<br>".$time."</td>"
                     ."</tr>";}?>
             </table>
+            <div class="uploadss">
+            <h1 class="header">Condominium</h1>
+            <form action="unitupload.php" id="unitupl" method="post">
+                Property Name:
+                <input type="text" name="property" id="" required>
+                Unit Name:
+                <input type="text" name="name" id="" required>
+                Floor Area:
+                <input type="text" name="floorarea" id="" required>
+                Price:
+                <input type="text" name="price" id="" required>
+                Details:
+                <input type="text" name="details" id="" required>
+                YT Link Embed:
+                <input type="text" name="yt" id="" required>
+                Gallery:
+                <input type="file" name="files[]" multiple id="" required>
+                City:
+                <input type="text" name="city" id="" required>
+                Address:
+                <input type="text" name="address" id="" required>
+                <input type="submit" name="submitcond" value="SUBMIT" id="submits">
+            </form>
+            <h1 class="header">House & Lot</h1>
+            <form action="houseupload.php" id="houseupl" method="post">
+                House Name:
+                <input type="text" name="property" id="" required>
+                Model Name:
+                <input type="text" name="name" id="" required>
+                Floor Area:
+                <input type="text" name="floorarea" id="" required>
+                Price:
+                <input type="text" name="price" id="" required>
+                Details:
+                <input type="text" name="details" id="" required>
+                YT Link Embed:
+                <input type="text" name="yt" id="" required>
+                Gallery:
+                <input type="file" name="files[]" multiple id="" required>
+                City:
+                <input type="text" name="city" id="" required>
+                Address:
+                <input type="text" name="address" id="" required>
+                <input type="submit" name="submitcond" value="SUBMIT" id="submits">
+            </form>
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script>
+          $('#houseupl').submit(function(event){
+            var formdata = new FormData(this);
+            $.ajax({
+                url:'houseupload.php',
+                data:formdata,
+                contentType:false,
+                cache:false,
+                processData:false,
+                type:"POST",
+                success:function(response){
+                    alert(response);
+                },
+                error:function(){
+                    alert("Something is wrong!");
+                }
+            });
+            event.preventDefault();
+          });
+      </script>
         </div>
         </div>
       </main>
   </body>
+</html>

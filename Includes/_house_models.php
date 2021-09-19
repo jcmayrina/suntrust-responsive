@@ -15,7 +15,7 @@
                 $picture = $item['house_gallery'];
                 $pic_separated = (explode(',',$picture));
                 ?>
-                <img src="<?php echo $comma_separated[0];?>"
+                <img src="<?php echo $pic_separated[0];?>"
                 alt="<?php 
                 echo $item['house_property']??'Unknown';
                 ?>">

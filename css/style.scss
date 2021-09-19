@@ -2159,3 +2159,24 @@ footer .footsoc ul a:hover {
   border: 1px solid black;
   padding: 5px;
 }
+.uploadss {
+  margin-top: 60px;
+}
+.uploadss form {
+  margin: 0 auto;
+  max-width: 50vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.uploadss form input {
+  margin-bottom: 20px;
+}
+.uploadss form #submits {
+  border: none;
+  font-size: 3rem;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}

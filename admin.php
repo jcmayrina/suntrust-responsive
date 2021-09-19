@@ -70,6 +70,7 @@
                     "<td>".$mos."<br>".$time."</td>"
                     ."</tr>";}?>
             </table>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <div class="uploadss">
             <h1 class="header">Condominium</h1>
             <form action="unitupload.php" id="unitupl" method="post">
@@ -92,7 +93,26 @@
                 Address:
                 <input type="text" name="address" id="" required>
                 <input type="submit" name="submitcond" value="SUBMIT" id="submits">
-            </form>
+            </form><script>
+          $('#unitupl').submit(function(event){
+            var formdata = new FormData(this);
+            $.ajax({
+                url:'unitupload.php',
+                data:formdata,
+                contentType:false,
+                cache:false,
+                processData:false,
+                type:"POST",
+                success:function(response){
+                    alert(response);
+                },
+                error:function(){
+                    alert("Something is wrong!");
+                }
+            });
+            event.preventDefault();
+          });
+      </script>
             <h1 class="header">House & Lot</h1>
             <form action="houseupload.php" id="houseupl" method="post">
                 House Name:
@@ -116,7 +136,6 @@
                 <input type="submit" name="submitcond" value="SUBMIT" id="submits">
             </form>
         <!-- JQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
       <script>
           $('#houseupl').submit(function(event){
             var formdata = new FormData(this);
